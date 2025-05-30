@@ -97,8 +97,6 @@ int main() {
 
         bool is_url = false;
         while (iss2 >> word) {
-            cout << word << endl;
-
             for (int i = 0; i < word.size(); ++i) {
                 if (word[i] == '.') {
                     if (i > 2 && word[i-1] ==  'w' && word[i-2] == 'w' && word[i-3] == 'w') {
@@ -111,8 +109,6 @@ int main() {
                             ending_of_word += toupper(word[i]);
                             ++i;
                         }
-
-                        cout << "Ending of word: " << ending_of_word << endl;
 
                         if (is_real_url(ending_of_word)) {
                             is_url = true;
